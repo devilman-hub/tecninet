@@ -1,0 +1,50 @@
+/* src/styles/Header.css */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #333;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+/* Efecto hover simple para que se vea interactivo */
+.nav a:hover {
+    color: #ffd700; /* Dorado, para destacar */
+}
+
+.icons {
+    display: flex;
+    gap: 20px;
+}
+
+.icon {
+    cursor: pointer;
+}
+
+.icon-link {
+    color: white;
+    display: flex; /* Asegura que el icono esté centrado si hay padding */
+    align-items: center;
+}

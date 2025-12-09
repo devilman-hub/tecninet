@@ -1,0 +1,86 @@
+/* src/styles/NosotrosScreen.css */
+
+.nosotros-container {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nosotros-title {
+    color: #007BFF;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.subtitle {
+    color: #333;
+    font-size: 1.8em;
+    margin-top: 0;
+}
+
+/* Estilos de la Sección General (Flexbox) */
+.nosotros-section {
+    display: flex;
+    align-items: center;
+    gap: 50px; /* Espacio entre la imagen y el texto */
+    margin-bottom: 60px;
+}
+
+/* Para la segunda sección, invertimos el orden de la imagen y el texto */
+.reverse-layout {
+    flex-direction: row-reverse;
+}
+
+.text-content {
+    flex: 1; /* Permite que el texto ocupe el espacio restante */
+    max-width: 600px;
+}
+
+.section-image {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.description-text {
+    line-height: 1.8;
+    color: #444;
+}
+
+.values-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.values-list li {
+    margin-bottom: 10px;
+    color: #28a745;
+    font-weight: bold;
+}
+
+.separator {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #007BFF, rgba(0, 0, 0, 0));
+    margin: 50px 0;
+}
+
+
+/* Responsividad: Apilar contenido en pantallas pequeñas */
+@media (max-width: 800px) {
+    .nosotros-section {
+        flex-direction: column; /* Apila texto e imagen verticalmente */
+        text-align: center;
+        gap: 30px;
+    }
+    .reverse-layout {
+        flex-direction: column; /* También se apila en el orden normal */
+    }
+    .text-content {
+        max-width: 100%;
+    }
+}

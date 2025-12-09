@@ -1,0 +1,33 @@
+/* src/styles/HomeScreen.css */
+
+.home-container {
+    padding: 40px 20px;
+}
+
+.home-title {
+    text-align: center;
+    color: #333; /* Cambiado a gris oscuro para contraste */
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    border-bottom: 2px solid #007BFF;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Estilos de la rejilla de servicios (CSS Grid) */
+.servicios-grid {
+    display: grid;
+    /* Por defecto, 2 columnas, pero flexibles */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px; /* Espacio entre las tarjetas */
+    max-width: 1200px;
+    margin: 0 auto; /* Centra el contenedor principal */
+}
+
+/* Estilos responsivos (se ajustan automáticamente si la pantalla es más pequeña) */
+/* Si la pantalla es muy pequeña (móvil), muestra 1 columna */
+@media (max-width: 600px) {
+    .servicios-grid {
+        grid-template-columns: 1fr;
+    }
+}
