@@ -1,5 +1,3 @@
-
-
 import React, { createContext, useState, useContext } from 'react';
 const AuthContext = createContext();
 
@@ -8,6 +6,15 @@ export const AuthProvider = ({ children }) => {
     // user: objeto con la información del usuario.
     const [isLogged, setIsLogged] = useState(false);
     const [user, setUser] = useState(null);
+
+   
+    const login = (userData) => {
+        // Lógica de autenticación.
+        
+
+        setIsLogged(true);
+        setUser(userData); // Guarda la información del usuario.
+    };
 
     // Función para el cierre de sesión.
     const logout = () => {
@@ -20,7 +27,7 @@ export const AuthProvider = ({ children }) => {
     const contextValue = {
         isLogged,
         user,
-        login,
+        login, 
         logout,
     };
 
