@@ -9,21 +9,14 @@ export const AuthProvider = ({ children }) => {
     const [isLogged, setIsLogged] = useState(false);
     const [user, setUser] = useState(null);
 
-    // Función para simular el inicio de sesión
-    const login = (userData) => {
-        setIsLogged(true);
-        setUser(userData);
-        // Aquí se guardará un token en el almacenamiento local.
-    };
-
-    // Función para simular el cierre de sesión
+    // Función para el cierre de sesión.
     const logout = () => {
         setIsLogged(false);
         setUser(null);
-        // Aquí se limpiaría el token del almacenamiento local.
+        
     };
 
-    // Objeto que contiene el estado y las funciones para compartir
+    // Objeto que contiene el estado y las funciones para compartir.
     const contextValue = {
         isLogged,
         user,

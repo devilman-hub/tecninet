@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 
 const FormuAdmin = ({ user }) => {
     
-    // 1. Inicialización del Estado (useState)
+    // Inicialización del Estado.
     const [formData, setFormData] = useState({
         nombre: user.nombre || '', 
         correo: user.correo || '',
         telefono: user.telefono || '',
-        password: '', // Campo para la nueva contraseña
+        password: '', 
     });
 
-    // 2. Función para Manejar los Cambios (handleChange)
+    // Función para los Cambios.
     const handleChange = (e) => {
         const { name, value } = e.target;
         
@@ -20,7 +20,7 @@ const FormuAdmin = ({ user }) => {
         });
     };
 
-    // 3. Función para Manejar el Envío del Formulario (handleSubmit)
+    // Función para Manejar el Envío del Formulario.
     const handleSubmit = (e) => {
         e.preventDefault(); // Evita la recarga de la página
         
@@ -30,11 +30,11 @@ const FormuAdmin = ({ user }) => {
             delete datosAEnviar.password;
         }
 
-        // Aquí iría la llamada a la API (fetch o Axios) para actualizar el perfil del administrador
+        // Aquí iría la llamada a la API.
         
         console.log('Enviando datos del Administrador para actualización:', datosAEnviar);
         
-        // --- Simulación de la llamada a la API ---
+        
         alert('¡Perfil de Administrador actualizado exitosamente!');
 
         // Limpiar el campo de contraseña después del envío exitoso
@@ -46,7 +46,7 @@ const FormuAdmin = ({ user }) => {
             <h2>Datos del Administrador</h2>
             <p>Aquí puedes actualizar tus datos personales y credenciales.</p>
             
-            {/* Campo Nombre (Solo Lectura) */}
+            {/* Campo Nombre */}
             <label htmlFor="nombre">Nombre:</label>
             <input 
                 type="text" 
@@ -71,7 +71,7 @@ const FormuAdmin = ({ user }) => {
             {/* Campo Teléfono */}
             <label htmlFor="telefono">Teléfono:</label>
             <input 
-                type="text" // 'text' es más flexible para números de teléfono
+                type="text" 
                 id="telefono"
                 name="telefono"
                 value={formData.telefono} 
@@ -79,7 +79,7 @@ const FormuAdmin = ({ user }) => {
                 placeholder="310..."
             />
             
-            {/* Campo Contraseña (solo se llena para cambiarla) */}
+            {/* Campo Contraseña */}
             <label htmlFor="password">Nueva Contraseña:</label>
             <input 
                 type="password"

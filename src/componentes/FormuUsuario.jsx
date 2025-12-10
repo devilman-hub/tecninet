@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const FormuUsuario = ({ user }) => {
-    // Inicializar useNavigate para la redirección
+    
     const navigate = useNavigate();
 
     const [formData, setFormData] = useState({
@@ -25,7 +25,7 @@ const FormuUsuario = ({ user }) => {
 
     // Función para Manejar el Envío del Formulario.
     const handleSubmit = (e) => {
-        e.preventDefault(); // Evita la recarga de la página
+        e.preventDefault(); // Evita la recarga de la página.
         
         // Objeto para enviar.
         const datosAActualizar = { ...formData };
@@ -71,7 +71,7 @@ const FormuUsuario = ({ user }) => {
             {/* Campo Teléfono */}
             <label htmlFor="telefono">Teléfono:</label>
             <input 
-                type="text" // Usar 'text' para mayor flexibilidad en formatos de teléfono
+                type="text" 
                 id="telefono"
                 name="telefono"
                 placeholder="310..."

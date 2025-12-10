@@ -28,5 +28,5 @@ const Footer = () => {
   );
 };
 
-// Eliminamos el objeto 'styles'
+
 export default Footer;

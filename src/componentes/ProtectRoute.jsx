@@ -5,8 +5,7 @@ import { useAuth } from '../AuthContext';
 const ProtectRoute = () => {
     const { user } = useAuth(); 
     
-    // Si el usuario está logueado, permite el acceso (<Outlet /> renderiza el componente hijo)
-    // Si no está logueado, lo envía a la página de login
+    // Si el usuario está logueado, permite el acceso.
     return user ? <Outlet /> : <Navigate to="/login" replace />;
 };
 

@@ -1,15 +1,15 @@
 import React from 'react';
-import { FaPhone, FaMapMarkerAlt, FaUserTie } from 'react-icons/fa'; // Iconos para contacto y ubicación
+import { FaPhone, FaMapMarkerAlt, FaUserTie } from 'react-icons/fa'; 
 import '../css/tecnicocard.css';
 
-// Este componente recibe la información completa de un técnico
+
 const TecnicoCard = ({ name, specialty, description, contact, location, imagePath }) => {
   return (
     <div className="tecnico-card">
       
       {/* Sección de la Imagen y el Nombre */}
       <div className="tecnico-header">
-        {/* Aquí la imagen del técnico */}
+        
         <img src={imagePath} alt={`Foto de ${name}`} className="tecnico-image" />
         <h3 className="tecnico-name">{name}</h3>
         <p className="tecnico-specialty"><FaUserTie /> {specialty}</p>

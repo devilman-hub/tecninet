@@ -6,15 +6,15 @@ import Footer from './Footer';
 const Layout = ({ children }) => {
   return (
     <div style={styles.mainLayout}>
-      {/* El Header es Fijo */}
+  
       <Header />
       
-      {/* El contenido de la página */}
+      {/* El contenido de la página. */}
       <main style={styles.content}>
         {children}
       </main>
       
-      {/* El Footer es Fijo */}
+    
       <Footer />
     </div>
   );
@@ -24,11 +24,13 @@ const styles = {
     mainLayout: {
         display: 'flex',
         flexDirection: 'column',
-        minHeight: '100vh', // Asegura que ocupe al menos toda la altura de la vista
+        minHeight: '100vh', 
     },
     content: {
-        flexGrow: 1, // Esto hace que el contenido ocupe el espacio restante, empujando al footer
-    }
+        flexGrow: 1, 
+}
+
+
 }
 
 export default Layout;

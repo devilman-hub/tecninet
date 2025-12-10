@@ -60,7 +60,7 @@ const Registro = () => {
                         <input type="password" id="password" name="password" value={formData.password} onChange={handleChange} required />
                     </div>
                     
-                    {/* Campo Rol (Lista de opción) */}
+                    {/* Campo Rol */}
                     <div className="form-group">
                         <label htmlFor="rol">Rol:</label>
                         <select id="rol" name="rol" value={formData.rol} onChange={handleChange} required>
