@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Para redirigir al Login después del registro
-import '../css/registro.css'; // Debes crear este archivo CSS
+import { useNavigate } from 'react-router-dom'; // Para redirigir al Login después del registro.
+import '../css/registro.css';
 
 const Registro = () => {
-    const navigate = useNavigate(); // Hook para navegar programáticamente
+    const navigate = useNavigate(); // Para navegar programáticamente.
     const [formData, setFormData] = useState({
         nombre: '',
         correo: '',
         telefono: '',
         password: '',
-        rol: 'Usuario' // Valor inicial
+        rol: 'Usuario'
     });
 
     const handleChange = (e) => {
@@ -25,7 +25,7 @@ const Registro = () => {
         
         alert(`¡Registro exitoso para ${formData.nombre}! Ahora serás redirigido al Login.`);
         
-        // Simulación de registro exitoso, redirigimos al Login
+        // Registro exitoso, redirigimos al Login.
         navigate('/login'); 
     };
 

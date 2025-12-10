@@ -4,7 +4,7 @@ import App from './App.jsx'
 import { AuthProvider } from './AuthContext.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.ProfilerStrictMode>
+  <React.StrictMode>
     <AuthProvider>
     <App />
     </AuthProvider>

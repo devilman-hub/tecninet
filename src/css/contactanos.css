@@ -1,19 +1,23 @@
-/* src/styles/ContactanosScreen.css */
 
 .contacto-container {
     max-width: 600px;
     margin: 40px auto;
     padding: 30px;
-    background: white;
+    background: rgb(188, 188, 188);
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    box-shadow: 0 0 15px rgba(13, 8, 60, 0.1);
 }
 
 .contacto-title {
     text-align: center;
-    color: #007BFF;
+    color: #1d446c;
     margin-bottom: 30px;
     font-size: 2em;
+}
+
+.contacto-title:hover{
+
+    color: green;
 }
 
 .contacto-form {
@@ -29,16 +33,17 @@
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    color: #555;
+    color: #303030;
 }
 
-/* Estilos para los campos de entrada y el área de texto */
+/* Campos de entrada y el área de texto. */
+
 .contacto-form input[type="email"],
 .contacto-form input[type="tel"],
 .contacto-form textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid #ccc;
+    border: 1px solid #293156;
     border-radius: 5px;
     font-size: 16px;
     transition: border-color 0.3s;
@@ -46,13 +51,12 @@
 
 .contacto-form input:focus,
 .contacto-form textarea:focus {
-    border-color: #007BFF; /* Resalta el borde al enfocar */
+    border-color: #185ca5; 
     outline: none;
 }
 
 .submit-button {
-    background-color: #28a745; /* Botón verde para "enviar" */
-    color: white;
+    background-color: #474791; 
     padding: 12px 20px;
     border: none;
     border-radius: 5px;
@@ -63,5 +67,5 @@
 }
 
 .submit-button:hover {
-    background-color: #218838;
+    background-color: #442ae8;
 }

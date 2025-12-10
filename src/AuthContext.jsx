@@ -1,14 +1,11 @@
-// src/AuthContext.jsx
+
 
 import React, { createContext, useState, useContext } from 'react';
-
-// 1. Crear el Contexto
 const AuthContext = createContext();
 
-// 2. Crear el Proveedor (Provider) que envuelve la aplicación
 export const AuthProvider = ({ children }) => {
-    // isLogged: booleano para saber si el usuario ha iniciado sesión
-    // user: objeto con la información del usuario (o null si no está logueado)
+    // isLogged: booleano para saber si el usuario ha iniciado sesión.
+    // user: objeto con la información del usuario.
     const [isLogged, setIsLogged] = useState(false);
     const [user, setUser] = useState(null);
 
@@ -16,7 +13,7 @@ export const AuthProvider = ({ children }) => {
     const login = (userData) => {
         setIsLogged(true);
         setUser(userData);
-        // En una aplicación real, aquí guardarías un token en el almacenamiento local.
+        // Aquí se guardará un token en el almacenamiento local.
     };
 
     // Función para simular el cierre de sesión
@@ -41,7 +38,6 @@ export const AuthProvider = ({ children }) => {
     );
 };
 
-// 3. Crear un hook personalizado para usar el contexto fácilmente
 export const useAuth = () => {
     return useContext(AuthContext);
 };

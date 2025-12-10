@@ -1,22 +1,19 @@
-/* src/styles/RegisterScreen.css */
 
-/* Usamos el mismo diseño de centrado y caja que el Login */
 .register-container {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 50px 20px;
-    background-color: #f7f7f7;
 }
 
 .register-form-box {
     width: 100%;
-    max-width: 450px; /* Un poco más ancho debido a más campos */
+    max-width: 450px; 
     padding: 30px;
-    background: white;
+    background: rgb(184, 184, 188);
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border-top: 5px solid #28a745; /* Un color diferente para distinguirlo del login */
+    border-top: 5px solid #192657; 
 }
 
 .register-title {
@@ -26,7 +23,7 @@
     font-size: 1.8em;
 }
 
-/* Estilos de formulario (reutilizados) */
+/* Estilos de formulario. */
 .form-group {
     margin-bottom: 20px;
 }
@@ -35,27 +32,25 @@
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    color: #555;
+    color: #494949;
 }
 
-/* Estilos para todos los campos de entrada y selección */
 .register-form-box input[type="text"],
 .register-form-box input[type="email"],
 .register-form-box input[type="tel"],
 .register-form-box input[type="password"],
-.register-form-box select { /* Añadimos el selector de Rol */
+.register-form-box select { /* Selector de Rol. */
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
-    /* Para el select, es importante darle la misma apariencia */
     appearance: none; 
 }
 
 .register-button {
-    background-color: #28a745; /* Botón verde para "Registro" */
-    color: white;
+    background-color: #36385b; 
+    color: rgb(94, 51, 51);
     padding: 12px 20px;
     border: none;
     border-radius: 5px;
@@ -68,5 +63,5 @@
 }
 
 .register-button:hover {
-    background-color: #1e7e34;
+    background-color: #263152;
 }

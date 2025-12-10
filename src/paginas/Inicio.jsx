@@ -1,17 +1,17 @@
 import React from 'react';
 import ServicioCard from '../componentes/ServicioCard';
-import '../css/inicio.css';
-
-// 1. Importamos las imágenes desde la carpeta 'images'. 
-//    En proyectos Vite/React, se importan como módulos.
 import Fontaneria from '../img/fontaneria.jpg';
 import Electricidad from '../img/electricidad.jpg';
 import Jardineria from '../img/jardinería.jpg';
 import Limpieza from '../img/limpieza.jpg';
+import '../css/inicio.css';
+
 
 
 const Inicio = () => {
-    // 2. Creamos un arreglo de datos para los servicios (esto facilita el manejo)
+
+    // Arreglo de datos para los servicios.
+    
     const servicios = [
         { title: 'Fontanería', path: '/tecnicos/fontaneria', image: Fontaneria },
         { title: 'Electricidad', path: '/tecnicos/electricidad', image: Electricidad },
@@ -20,19 +20,17 @@ const Inicio = () => {
     ];
     
     return (
+
         <div className="home-container">
-            {/* Título Principal */}
+           
             <h1 className="home-title">Nuestros Servicios</h1>
             
             {/* Contenedor de las Tarjetas de Servicios */}
-            <div className="servicios-grid">
-                {/* 3. Usamos la función 'map' para iterar sobre nuestro arreglo de servicios.
-                    Esto es una técnica clave en React para renderizar listas dinámicas.
-                    La propiedad 'key' es obligatoria para ayudar a React a rastrear los elementos.
-                */}
-                {servicios.map((servicio) => (
+            <div className="servicios-grid"> 
+                    
+                {servicios.map((servicio) => ( // Map para iterar servicios.
                     <ServicioCard 
-                        key={servicio.title} // Usamos el título como key único
+                        key={servicio.title} // Rastrear los elementos.
                         title={servicio.title}
                         imagePath={servicio.image} 
                     />

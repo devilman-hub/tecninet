@@ -1,15 +1,14 @@
 import React from 'react';
 import TecnicoCard from '../componentes/TecnicoCard';
-import '../css/tecnicocard.css';
-
-// 1. Importamos las imágenes simuladas de los técnicos
 import Carlos from '../img/carlos.jpg';
 import Manuel from '../img/manuel.jpg';
 import Luis from '../img/luis.jpg';
 import Julián from '../img/julián.jpg';
+import '../css/tecnicocard.css';
+import '../css/tecnicos.css';
 
 const Tecnicos = () => {
-    // 2. Arreglo de datos de los técnicos, tal como lo solicitaste:
+    
     const tecnicosData = [
         {
             id: 1,
@@ -53,7 +52,7 @@ const Tecnicos = () => {
         <div className="tecnicos-container">
             <h1 className="tecnicos-title">Nuestros Técnicos Certificados</h1>
 
-            {/* Iteramos y mostramos cada tarjeta */}
+            
             <div className="tecnicos-list">
                 {tecnicosData.map((tecnico) => (
                     <TecnicoCard 

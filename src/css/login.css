@@ -1,34 +1,30 @@
-/* src/styles/LoginScreen.css */
 
-/* Contenedor principal para centrar la caja */
 .login-container {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 50px 20px;
-    min-height: 80vh; /* Asegura que la caja esté centrada en la vista */
-    background-color: #f7f7f7;
+    min-height: 80vh;
+    background-color: #8193d4;
 }
-
-/* Caja que contiene el formulario */
 .login-form-box {
     width: 100%;
-    max-width: 400px; /* Ancho máximo estándar para formularios */
+    max-width: 400px; 
     padding: 30px;
-    background: white;
+    background: rgb(207, 203, 237);
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border-top: 5px solid #007BFF; /* Detalle de color de marca */
+    border-top: 5px solid #214163; 
 }
 
 .login-title {
     margin-bottom: 25px;
     text-align: center;
-    color: #333;
+    color: #0b235e;
     font-size: 1.8em;
 }
 
-/* Reutilizamos las clases de formulario del Contacto */
+
 .form-group {
     margin-bottom: 20px;
 }
@@ -50,7 +46,7 @@
 }
 
 .login-button {
-    background-color: #007BFF; /* Color primario de la marca */
+    background-color: #223954; 
     color: white;
     padding: 12px 20px;
     border: none;
@@ -64,18 +60,18 @@
 }
 
 .login-button:hover {
-    background-color: #0056b3;
+    background-color: #3c5977;
 }
 
 .register-link-text {
     text-align: center;
     margin-top: 20px;
     font-size: 0.95em;
-    color: #666;
+    color: #474747;
 }
 
 .register-link {
-    color: #28a745; /* Enlace verde para "Registro" */
+    color: #2e396e; 
     text-decoration: none;
     font-weight: bold;
 }

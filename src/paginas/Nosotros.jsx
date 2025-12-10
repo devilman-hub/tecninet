@@ -1,7 +1,5 @@
 import React from 'react';
 import '../css/nosotros.css';
-
-// Importamos las imágenes (debes tenerlas en la carpeta src/images)
 import Equipo from '../img/equipo.jpg';
 import Us from '../img/us.jpg';
 
@@ -9,7 +7,7 @@ const Nosotros = () => {
   return (
     <div className="nosotros-container">
       
-      {/* Sección 1: Introducción y Descripción de Tecninet */}
+      {/* Introducción y Descripción de Tecninet */}
       <section className="nosotros-section">
         <div className="text-content">
           <h1 className="nosotros-title">Bienvenido a Tecninet</h1>
@@ -23,7 +21,7 @@ const Nosotros = () => {
       {/* Una línea separadora para claridad visual */}
       <hr className="separator" />
 
-      {/* Sección 2: Nuestros Valores y Compromiso (con imagen en orden diferente) */}
+      {/* Nuestros Valores y Compromiso */}
       <section className="nosotros-section reverse-layout">
         <img src={Us} alt="Compromiso y Valores de Tecninet" className="section-image" />
         <div className="text-content">

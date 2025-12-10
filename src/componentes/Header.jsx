@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaSearch, FaUser } from 'react-icons/fa';
-// Importamos nuestro hook de autenticación
-import { useAuth } from '../AuthContext'; 
+import { useAuth } from '../AuthContext'; //Hook de autenticación.
+import Logo from '../img/logo.png';
 
 import '../css/header.css'; 
 
@@ -19,9 +19,12 @@ const Header = () => {
     return (
         <header className="header">
             
-            {/* ... Logo y Nav (sin cambios) ... */}
-            <div className="logo">
-                <Link to="/">TECNINET</Link>
+            {/* Logo y Nav. */}
+           <div className="logo">
+                <Link to="/">
+                    <img src={Logo} alt="Logo" className="header-logo-img"/>
+                    <span className="logo-text">TECNINET</span>
+                </Link>
             </div>
 
             <nav className="nav">
@@ -31,7 +34,7 @@ const Header = () => {
                 <Link to="/nosotros">Nosotros</Link>
             </nav>
 
-            {/* 3. Iconos de Acción (Cambiamos el enlace condicionalmente) */}
+            {/* Iconos de la biblioteca de React. */}
             <div className="icons">
                 <span className="icon"><FaSearch size={20} /></span> 
                 

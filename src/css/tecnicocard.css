@@ -1,54 +1,67 @@
-/* src/styles/TecnicoCard.css */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 .tecnico-card {
-    background-color: #fff;
-    border: 1px solid #e0e0e0;
+    background-color: #d5e8ff;
+    border: 1px solid #121d4e;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    display: flex; /* Permite organizar la imagen y los detalles lado a lado */
-    gap: 20px;
+    display: flex; 
     margin-bottom: 20px;
 }
 
-/* Estilos de la cabecera (Imagen y Nombre) */
 .tecnico-header {
     flex-shrink: 0; /* Evita que esta sección se encoja */
     text-align: center;
-    width: 150px; /* Ancho fijo para la sección de la imagen */
+    width: 150px; 
 }
 
 .tecnico-image {
     width: 100px;
     height: 100px;
-    border-radius: 50%; /* Hace que la imagen sea redonda */
+    border-radius: 50%; 
     object-fit: cover;
-    border: 3px solid #007BFF;
+    border: 3px solid #102b49;
     margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s;
+}
+
+.tecnico-image:hover{
+
+    border: 3px solid rgb(90, 136, 50);
+    opacity: 1; 
+    transform: scale(1.1); 
+    cursor: pointer;
+
 }
 
 .tecnico-name {
     font-size: 1.4em;
-    color: #333;
+    color: #161657;
     margin: 0;
 }
 
+.tecnico-name:hover{
+
+    color: rgb(90, 136, 50);
+}
+
 .tecnico-specialty {
-    color: #555;
+    color: #2e2d2d;
     font-size: 0.9em;
     margin-top: 5px;
 }
 
-/* Estilos de los detalles del técnico */
+
 .tecnico-details {
-    flex-grow: 1; /* Ocupa el espacio restante */
+    flex-grow: 1; /* Ocupa el espacio restante. */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .tecnico-description {
-    color: #666;
+    color: #262525;
     margin-bottom: 15px;
 }
 
@@ -73,13 +86,13 @@
 /* Responsividad para pantallas pequeñas */
 @media (max-width: 600px) {
     .tecnico-card {
-        flex-direction: column; /* Apila los elementos en móvil */
+        flex-direction: column; 
         text-align: center;
     }
     .tecnico-header {
         width: 100%;
     }
     .tecnico-image {
-        margin: 0 auto 10px; /* Centra la imagen */
+        margin: 0 auto 10px; 
     }
 }

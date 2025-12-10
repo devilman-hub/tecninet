@@ -1,122 +1,129 @@
-/* src/styles/ProfileScreen.css */
 
-.profile-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Alineado arriba para dejar espacio al Header/Footer */
-    padding: 40px 20px;
-    background-color: #f0f2f5; /* Fondo suave */
-    min-height: 80vh;
-}
-
-.profile-card {
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    width: 100%;
+.usuario-form, 
+.tecnico-form, 
+.admin-form {
     max-width: 600px;
-    text-align: center;
-}
-
-.profile-icon {
-    color: #007BFF;
-    margin-bottom: 15px;
-}
-
-.profile-name {
-    font-size: 2em;
-    color: #333;
-    margin-bottom: 5px;
-}
-
-.profile-role {
-    font-size: 1.1em;
-    color: #5cb85c; /* Verde para el rol */
-    font-weight: bold;
-    margin-bottom: 30px;
-}
-
-.profile-details {
-    text-align: left;
-    margin-bottom: 30px;
-}
-
-.profile-group {
-    margin-bottom: 15px;
-}
-
-.profile-group label {
-    display: block;
-    font-weight: bold;
-    color: #444;
-    margin-bottom: 5px;
-}
-
-/* Campos de entrada */
-.profile-card input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    font-size: 1em;
-}
-
-/* Estilo para cuando el campo NO es editable */
-.profile-card input.read-only {
+    margin: 40px auto;
+    padding: 30px;
     background-color: #f9f9f9;
-    color: #666;
-    border-color: #eee;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
 }
 
-/* Estilo para cuando el campo SÍ es editable */
-.profile-card input.editable {
-    background-color: #fff;
-    border-color: #007BFF;
+/* Títulos y Subtítulos */
+.usuario-form h2, 
+.tecnico-form h2, 
+.admin-form h2 {
+    color: #007bff;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 5px;
+}
+
+.usuario-form p, 
+.tecnico-form p, 
+.admin-form p {
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 0.95em;
+}
+
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+input[type="text"], 
+input[type="email"], 
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box; 
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #007bff;
+    outline: none;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
 }
 
-.profile-actions {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
+/* Estilos para campos deshabilitados (como el Nombre) */
+input:disabled {
+    background-color: #e9ecef;
+    color: #6c757d;
+    cursor: not-allowed;
 }
 
-.action-button {
-    padding: 10px 15px;
+
+textarea {
+    resize: vertical; 
+    min-height: 100px;
+}
+
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 25px;
+    background-color: #28a745; 
+    color: white;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    border-radius: 6px;
+    font-size: 1.1em;
     font-weight: bold;
-    font-size: 0.95em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+
+.profile-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.profile-title {
+    color: #007bff;
+    font-size: 2.2em;
+    margin-bottom: 5px;
+}
+
+.profile-subtitle {
+    color: #6c757d;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+.profile-form-wrapper {
     display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: background-color 0.3s;
+    justify-content: center;
 }
 
-/* Estilos específicos de botones */
-.edit-button {
-    background-color: #ffc107;
-    color: #333;
-}
-.save-button {
-    background-color: #5cb85c;
-    color: white;
-}
-.cancel-button {
-    background-color: #f0ad4e;
-    color: white;
-}
-.logout-button {
-    background-color: #dc3545;
-    color: white;
-}
 
-/* Responsividad para apilar botones en móvil */
-@media (max-width: 600px) {
-    .profile-actions button {
-        width: 100%;
-    }
+.profile-error {
+    text-align: center;
+    color: red;
+    font-size: 1.5em;
+    margin-top: 50px;
+    padding: 20px;
+    border: 1px solid #ffdddd;
+    background-color: #fff0f0;
+    border-radius: 8px;
 }

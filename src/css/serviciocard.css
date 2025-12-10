@@ -1,32 +1,40 @@
-/* src/styles/ServicioCard.css */
-
 .servicio-card {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 15px;
+    background: linear-gradient(145deg, #cac6d8, #525c98); 
+    border: none; 
+    border-radius: 15px; 
+    padding: 25px; 
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    overflow: hidden; /* Oculta cualquier cosa que se salga del borde redondeado */
+
+    box-shadow: 30 30px 30px rgba(0, 0, 0, 0.1), 30 30px 30px rgba(0, 0, 0, 0.05);
+    
+    /* Animación de transición para todos los cambios. */
+    transition: all 0.3s ease-in-out; 
+    overflow: hidden; 
+    cursor: pointer; 
 }
 
-/* Efecto visual al pasar el ratón */
+
 .servicio-card:hover {
-    transform: translateY(-5px); /* Se levanta un poco */
+    transform: translateY(-5px); 
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .servicio-image {
-    width: 100%; /* Ocupa todo el ancho de la tarjeta */
-    max-height: 150px; /* Limita la altura de la imagen */
-    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    width: 100%; 
+    max-height: 150px; 
+    object-fit: cover; 
     border-radius: 4px;
     margin-bottom: 10px;
 }
 
 .servicio-title {
     font-size: 1.2em;
-    color: #007BFF; /* Azul para los títulos de servicio */
+    color: #e7e7eb; 
     margin: 0;
+    transition: color 0.3s ease;
+}
+
+.servicio-title:hover{
+
+    color:#1c265e;
 }
